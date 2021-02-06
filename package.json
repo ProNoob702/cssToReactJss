@@ -1,0 +1,45 @@
+{
+  "name": "css-to-jss-lib",
+  "version": "1.0.0",
+  "description": "convert css string code to jss string code",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProNoob702/cssToReactJss.git"
+  },
+  "keywords": [
+    "css to jss",
+    "jss",
+    "css",
+    "material ui jss"
+  ],
+  "author": "ProNoob702",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProNoob702/cssToReactJss/issues"
+  },
+  "homepage": "https://github.com/ProNoob702/cssToReactJss#readme",
+  "peerDependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-babel": "^5.2.3",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "@types/lodash": "^4.14.168",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rollup": "^2.38.2",
+    "rollup-plugin-browserify-transform": "^1.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.1.3"
+  }
+}
