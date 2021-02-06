@@ -3,7 +3,7 @@
   <p align="center">
    Convert css string code to jss string code
     <br />
-    <a href="https://ProNoob702.io/css-sass-to-jss-1/">View Demo</a>
+    <a href="https://pronoob702.github.io/css-sass-to-jss/">View Demo</a>
   </p>
 </p>
 
