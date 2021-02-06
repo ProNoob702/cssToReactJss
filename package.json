@@ -1,10 +1,13 @@
 {
   "name": "css-to-jss-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert css string code to jss string code",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c"
   },
@@ -23,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/ProNoob702/cssToReactJss/issues"
   },
-  "homepage": "https://github.com/ProNoob702/cssToReactJss#readme",
+  "homepage": "http://cssinjs.org",
   "peerDependencies": {
     "lodash": "^4.17.4"
   },
