@@ -1,3 +1,9 @@
+const doesValObject = (val) =>
+  typeof val === "object" && val !== undefined && val !== null;
+
+const doesValNumber = (val) =>
+  typeof val === "number" && val !== undefined && val !== null;
+
 const styleObjectToString = (style) => {
   return Object.keys(style).reduce(
     (acc, key) => acc + camelCaseToCssProp(key, style[key]),
@@ -5,17 +11,29 @@ const styleObjectToString = (style) => {
   );
 };
 
-const camelCaseToCssProp = (key, style) =>
-  key
-    .split(/(?=[A-Z])/)
-    .join("-")
-    .toLowerCase() +
-  ":" +
-  style +
-  "px;";
-
-const doesValObject = (val) =>
-  typeof val === "object" && val !== undefined && val !== null;
+const camelCaseToCssProp = (key, style) => {
+  if (doesValNumber(style)) {
+    return (
+      key
+        .split(/(?=[A-Z])/)
+        .join("-")
+        .toLowerCase() +
+      ":" +
+      style +
+      "px;\n"
+    );
+  } else {
+    return (
+      key
+        .split(/(?=[A-Z])/)
+        .join("-")
+        .toLowerCase() +
+      ":" +
+      style +
+      ";\n"
+    );
+  }
+};
 
 // normally if it's a style object one key give an idea about other keys directly
 const isLastNest = (objectOrVal) => {
@@ -46,7 +64,9 @@ export default function jssToCss(json) {
   let result = "";
   Object.keys(json).forEach((key) => {
     if (doesValObject(json[key])) {
-      result += `${key} {${convertNestedStylesToCssString(key, json[key])}}`;
+      result += `
+.${key} {
+  ${convertNestedStylesToCssString(key, json[key])}}`;
     } else {
       result = result + camelCaseToCssProp(key, json[key]);
     }
