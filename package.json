@@ -1,6 +1,6 @@
 {
   "name": "css-to-jss-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "convert css string code to jss string code",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
